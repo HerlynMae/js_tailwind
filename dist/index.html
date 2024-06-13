@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript using TailwindCSS</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <h4>JavaScript</h4>
+          <nav>
+            <ul class="header__nav">
+              <li><a href="">Slider</a></li>
+              <li><a href="">Dropdown</a></li>
+              <li><a href="">Tabs</a></li>
+              <li><a href="">Progress</a></li>
+            </ul>
+          </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- slider -->
+    <section class="slider">
+      <div class="container">
+        <div class="slider__wrapper">
+          <div class="slider__content">
+            <img src="../img/banner1.jpg" alt="" />
+            <img src="../img/banner2.jpg" alt="" />
+            <img src="../img/banner3.jpg" alt="" />
+          </div>
+          <div class="slider__text">
+            <h2>
+              “The best way to spread Christmas cheer is singing loud for all to
+              hear.”
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- dropdown -->
+    <section class="dropdown">
+      <div class="container">
+        <div class="dropdown__wrapper">
+          <div class="dropdown__content">
+            <div class="dropdown__item">
+              <h4>
+                What is Christmas? <i class="fa-solid fa-chevron-down"></i>
+              </h4>
+              <p>
+                Christmas is about the birth of God's Son – Jesus. It is about
+                how he came to give us love, hope and joy. Christmas is about
+                the birth of God's Son – Jesus. It is about how he came to give
+                us love, hope and joy.
+              </p>
+            </div>
+            <div class="dropdown__item">
+              <h4>
+                How it feels when receiving a gift?
+                <i class="fa-solid fa-chevron-down"></i>
+              </h4>
+              <p>
+                Gifts are a great source of happiness and smile in our lives. Be
+                it any occasion or celebration, the tradition of giving and
+                receiving gifts not only brings a smile on the face of the
+                receiver but also makes the giver feel happy and excited.
+              </p>
+            </div>
+            <div class="dropdown__item">
+              <h4>
+                How it feels when giving a gift?
+                <i class="fa-solid fa-chevron-down"></i>
+              </h4>
+              <p>
+                Christmas is about the birth of God's Son – Jesus. It is about
+                how he came to give us love, hope and joy. Christmas is about
+                the birth of God's Son – Jesus. It is about how he came to give
+                us love, hope and joy.
+              </p>
+            </div>
+          </div>
+          <div class="dropdown__img">
+            <img src="../img/accordion1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tabs -->
+    <section class="tabs">
+      <div class="container">
+        <div class="tabs__wrapper">
+          <div class="tabs__item">
+            <p class="tabs__link active" id="tabs-1">Christmas in PH</p>
+            <p class="tabs__link" id="tabs-2">Christmas in AU</p>
+            <p class="tabs__link" id="tabs-3">Christmas in NZ</p>
+          </div>
+          <div class="tabs__content">
+            <div class="tabs__image active" id="tabs-1-content">
+              <img src="../img/tab1.jpg" alt="" />
+            </div>
+            <div class="tabs__image" id="tabs-2-content">
+              <img src="../img/tab2.jpg" alt="" />
+            </div>
+            <div class="tabs__image" id="tabs-3-content">
+              <img src="../img/tab3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- progress bar -->
+    <section class="progress">
+      <div class="container">
+        <div class="progress__wrapper">
+          <h4>Skills Progress</h4>
+          <div class="progress__content">
+            <h4>HTML</h4>
+            <div class="progress__bar">
+              <span data-width="90%"></span>
+            </div>
+          </div>
+          <div class="progress__content">
+            <h4>CSS</h4>
+            <div class="progress__bar">
+              <span data-width="80%"></span>
+            </div>
+          </div>
+          <div class="progress__content">
+            <h4>JavaScript</h4>
+            <div class="progress__bar">
+              <span data-width="70%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="bar">
+      <div class="container">
+        <div class="bar__wrapper">
+          <label>HTML:</label>
+
+          <progress max="100" value="90"></progress>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* to customize the scroll bar width */
+  ::-webkit-scrollbar {
+    @apply w-px;
+  }
+
+  /* header */
+  .header {
+    @apply py-5 fixed w-full z-50 bg-green-200;
+  }
+  .header__wrapper {
+    @apply flex justify-between items-center;
+  }
+  .header__nav {
+    @apply flex flex-col gap-5 fixed  top-[4rem] 
+    bg-gray-300 h-screen w-full text-center right-[-100%] justify-center
+    font-semibold duration-700
+    /* desktop */
+     lg:flex-row lg:h-auto lg:w-auto lg:static lg:bg-transparent;
+  }
+  .header__nav.open {
+    @apply right-0 duration-700;
+  }
+  .header__nav li a {
+    @apply text-black hover:text-green-900;
+  }
+  .header__wrapper h4 {
+    @apply font-semibold;
+  }
+  .toggle__menu {
+    @apply lg:hidden;
+  }
+  .header .toggle__menu {
+    @apply flex flex-col gap-1 z-50 relative
+    /* desktop */
+    lg:hidden;
+  }
+  .toggle__menu span {
+    @apply block right-5 content-["*"] bg-black w-10 h-1 
+    rounded-lg ease-in-out duration-700;
+  }
+  .toggle__menu.open span:first-child {
+    @apply translate-y-[10px] rotate-[230deg] ease-in-out duration-700;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .toggle__menu.open span:last-child {
+    @apply translate-y-[-6px] rotate-[-230deg] ease-in-out duration-700;
+  }
+
+  /* slider */
+  .slider {
+    @apply pt-[6rem] pb-10;
+  }
+  .slider__wrapper {
+    @apply flex flex-col
+    /* desktop */
+    lg:flex-row lg:justify-between lg:items-center lg:gap-16;
+  }
+  .slider__content img {
+    @apply w-full h-[25rem] object-cover object-bottom
+    /* desktop */
+    lg:max-w-[45rem];
+  }
+  .tns-outer {
+    @apply overflow-hidden max-w-[45rem];
+  }
+  button {
+    @apply hidden;
+  }
+  .slider__text h2 {
+    @apply text-3xl font-bold mt-3;
+  }
+  /* dropdown */
+  .dropdown {
+    @apply bg-green-200 py-8;
+  }
+  .dropdown__wrapper {
+    @apply flex flex-col 
+    /* desktop */
+    lg:flex-row lg:justify-between lg:items-center lg:gap-16;
+  }
+  .dropdown__item {
+    @apply mb-5;
+  }
+  .dropdown__item:last-child {
+    @apply mb-0;
+  }
+  .dropdown__item h4,
+  i {
+    @apply bg-green-800 text-white px-3 py-2 font-bold 
+    duration-500 flex justify-between items-center cursor-pointer;
+  }
+  .dropdown__item i.open {
+    @apply rotate-[900deg] duration-500;
+  }
+  .dropdown__item p {
+    @apply bg-slate-50 h-auto max-h-0 overflow-hidden 
+    ease-in-out duration-300 text-justify;
+  }
+  .dropdown__item p.open {
+    @apply max-h-[50rem] bg-slate-50 text-justify duration-700 p-3;
+  }
+  .dropdown__img img {
+    @apply w-full h-[25rem] object-cover object-bottom hidden
+    /* desktop */
+    lg:block lg:w-[150rem];
+  }
+  /* tab */
+  .tabs {
+    @apply py-10;
+  }
+  .tabs .tabs__wrapper {
+    @apply flex flex-col 
+    /* desktop */
+    lg:flex-row lg:justify-between lg:items-center;
+  }
+  .tabs .tabs__item p {
+    @apply bg-green-900 text-stone-300 px-36 py-4  
+    font-semibold text-[1.2rem] mb-3 cursor-pointer lg:cursor-pointer;
+  }
+  .tabs .tabs__content .tabs__image img {
+    @apply w-full h-[25rem];
+  }
+  /* hide it w/ js but if w/o js use block */
+  .tabs__image {
+    @apply hidden lg:hidden;
+  }
+  .tabs__image.active {
+    @apply block lg:block;
+  }
+  .tabs .tabs__item p.active {
+    @apply px-36 py-4  bg-black lg:bg-black;
+  }
+
+  /* progress bar */
+  .progress {
+    @apply py-10 bg-green-200;
+  }
+  .progress__wrapper {
+    @apply flex flex-col items-center justify-center;
+  }
+  .progress__wrapper h4 {
+    @apply mb-5 text-xl  font-semibold;
+  }
+  .progress__content {
+    @apply mb-6;
+  }
+
+  .progress__content h4 {
+    @apply mb-2 ml-4 font-semibold;
+  }
+  .progress__bar {
+    @apply relative w-[30rem] h-8 rounded-lg bg-stone-300 shadow-lg;
+  }
+  .progress__bar span {
+    @apply absolute top-0 left-0 w-0 h-full text-stone-300 
+      font-semibold text-lg  text-center rounded-lg
+      bg-green-500 transition-all;
+  }
+}
+
+/* this is components since it will serve as an repeatable patterns */
+@layer components {
+  .container {
+    @apply max-w-[1100px] w-full px-4 mx-auto;
+  }
+}
